@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assigning_Jagged_Array {
+namespace Printing_Out_Jagged_Array {
     class Program {
         static void Main(string[] args) {
             int[][] Pyramid = new int[15][];
