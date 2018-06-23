@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp64 {
+namespace Matrix_Functions {
     class Program {
         public static void Matrix_Print(int[][] Matrix, int Rows, int Columns) {
             for (int i = 0; i < Rows; i++) {
