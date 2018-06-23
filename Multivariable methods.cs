@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Multivariable_Method {
+namespace Multivariable_Methods {
     class Program {
         static Tuple<string, string> Multivariable_Method(int Input_1, int Input_2) {
             string Output_1 = (Input_1 % 2 == 0) ? "1: Even" : "1: Odd";
