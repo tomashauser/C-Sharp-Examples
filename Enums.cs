@@ -1,6 +1,6 @@
 using System;
 
-namespace ConsoleApp70 {
+namespace Enums {
     class Program {
         public enum Days { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
         static void Main(string[] args) {
