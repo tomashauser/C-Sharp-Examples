@@ -9,7 +9,7 @@ namespace ConsoleApp91 {
         static void Main(string[] args) {
             while (true) {
                 try {
-                    Console.WriteLine("Zadejte koeficienty kvadratické rovnice ax^2 + bx + c oddělené čárkou ve formě => a,b,c");
+                    Console.WriteLine("Zadejte koeficienty kvadratické rovnice ax^2 + bx + c = 0 oddělené čárkou ve formě => a,b,c");
                     string input = Console.ReadLine();
                     double a, b, c, koren1, koren2, korenRealnaCast, korenImaginarniCast;
                     a = Convert.ToDouble(input.Substring(0, input.IndexOf(',')));
