@@ -19,7 +19,7 @@ namespace ConsoleApp90 {
                         Console.WriteLine("Nulou dělit nelze.");
                         continue;
                     }
-                    Console.WriteLine("Zvolte operaci:");
+                    Console.WriteLine("Zvolte operaci: ( [+] [-] [*] [/] )");
                     string operand = Console.ReadLine();
                     switch (operand) {
                         case "+": soucet(); break;
