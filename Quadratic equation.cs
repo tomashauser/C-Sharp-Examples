@@ -9,7 +9,6 @@ namespace ConsoleApp91 {
         static void Main(string[] args) {
             while (true) {
                 try {
-                    Console.WriteLine("Zadejte koeficienty kvadratické rovnice ax^2 + bx + c oddělené čárkou ve formě => a,b,c");
                     Console.WriteLine("Enter coefficients of a quadratic equation ax^2 + bx + c = 0 separated by comma => a,b,c");
                     string input = Console.ReadLine();
                     double a, b, c, root1, root2, rootRealPart, rootImaginaryPart;
