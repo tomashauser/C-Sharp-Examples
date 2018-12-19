@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp103 {
+    class Program {
+        static double fx(double a, double b, double c, double x0) {
+            return a * x0 * x0 + b * x0 + c;
+        }
+        static double IntegralKvadratickeFunkce(int a0, int b0, double dx, double a, double b, double c) {
+            int n = 1;
+            double sum = 0, x0; //x0 = právě řešený bod
+            do {
+                x0 = a0 + n * dx;
+                sum += fx(a, b, c, x0) * dx;
+                n++;
+            }
+            while (x0 <= b0);
+            return sum;
+        }
+        static void Main(string[] args) {
+            while (true) {
+                Console.WriteLine("Zadejte koeficienty kvadratické rovnice ax^2 + bx + c = 0 oddělené čárkou ve formě => a,b,c");
+                string input = Console.ReadLine();
+                double a, b, c, dx;
+                int a0, b0;
+                a = Convert.ToDouble(input.Substring(0, input.IndexOf(',')));
+                input = input.Substring(input.IndexOf(',') + 1, input.Length - Convert.ToString(a).Length - 1);
+                b = Convert.ToDouble(input.Substring(0, input.IndexOf(',')));
+                c = Convert.ToDouble(input.Substring(input.IndexOf(',') + 1, input.Length - Convert.ToString(b).Length - 1));
+                Console.WriteLine("Zadejte hranice integrálu - horní, dolní");
+                input = Console.ReadLine();
+                a0 = Convert.ToInt32(input.Substring(0, input.IndexOf(',')));
+                input = (input.Substring(input.IndexOf(',') + 1, input.Length - Convert.ToString(a0).Length - 1));
+                b0 = Convert.ToInt32(input);
+                Console.WriteLine("Zadejte dx: ");
+                dx = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Integrál od {0} do {1} zadané funkce je roven: {2}", a0, b0, IntegralKvadratickeFunkce(a0, b0, dx, a, b, c));
+            }
+        }
+    }
+}
